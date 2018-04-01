@@ -76,4 +76,39 @@ class ViewController: UIViewController, ARSKViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+    
+    //コピペしたコード
+    
+   // func hitTest(_ point: CGPoint, types: ARHitTestResult.ResultType) -> [ARHitTestResult]
+    
+    func getCenter() -> SCNVector3? {
+        // スマフォ画面の中央座標
+        let touchLocation = sceneView.center
+        // hitTestによる判定
+        let hitResults = sceneView.hitTest(touchLocation, types: [.featurePoint])
+        // 結果取得に成功しているかどうか
+        if !hitResults.isEmpty {
+            if let hitTResult = hitResults.first {
+                // 実世界の座標をSCNVector3で返す
+                return SCNVector3(hitTResult.worldTransform.columns.3.x, hitTResult.worldTransform.columns.3.y, hitTResult.worldTransform.columns.3.z)
+            }
+        }
+        return nil
+    }
+    /*
+    let position = SCNVector3Make(endPosition.x - startPosition.x, endPosition.y - startPosition.y, endPosition.z - startPosition.z)
+    let distance = sqrt(position.x * position.x + position.y * position.y + position.z * position.z)
+    print(String.init(format: "%.2fm", arguments: [distance]))
+ */
+    func createLineNode(startPosition: SCNVector3, endPosition: SCNVector3, color: UIColor) -> SCNNode {
+        let indices: [Int32] = [0, 1]
+        let source = SCNGeometrySource(vertices: [startPosition, endPosition])
+        let element = SCNGeometryElement(indices: indices, primitiveType: .line)
+        let line = SCNGeometry(sources: , elements: [element])
+        line.firstMaterial?.lightingModel = SCNMaterial.LightingModel.blinn
+        let lineNode = SCNNode(geometry: line)
+        lineNode.geometry?.firstMaterial?.diffuse.contents = color
+        return lineNode
+    }
+
 }
