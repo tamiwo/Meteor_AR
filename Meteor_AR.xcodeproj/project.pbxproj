@@ -58,16 +58,64 @@
 		A3132996206FE48700A66939 /* Meteor_AR */ = {
 			isa = PBXGroup;
 			children = (
-				A3132997206FE48700A66939 /* AppDelegate.swift */,
-				A3132999206FE48700A66939 /* Scene.sks */,
-				A313299B206FE48700A66939 /* Scene.swift */,
-				A313299D206FE48700A66939 /* ViewController.swift */,
-				A313299F206FE48700A66939 /* Main.storyboard */,
-				A31329A2206FE48700A66939 /* Assets.xcassets */,
-				A31329A4206FE48700A66939 /* LaunchScreen.storyboard */,
-				A31329A7206FE48700A66939 /* Info.plist */,
+				B6BAEF882071068B007D5FC9 /* Supporting Files */,
+				B6BAEF892071171E007D5FC9 /* Sources */,
+				B6BAEF8C20711767007D5FC9 /* Scenes */,
+				B6BAEF8D2071178B007D5FC9 /* Resources */,
 			);
 			path = Meteor_AR;
+			sourceTree = "<group>";
+		};
+		B6BAEF882071068B007D5FC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A31329A7206FE48700A66939 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6BAEF892071171E007D5FC9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B6BAEF8A20711731007D5FC9 /* Defaults */,
+				B6BAEF8B20711745007D5FC9 /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B6BAEF8A20711731007D5FC9 /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				A3132997206FE48700A66939 /* AppDelegate.swift */,
+			);
+			path = Defaults;
+			sourceTree = "<group>";
+		};
+		B6BAEF8B20711745007D5FC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A31329A4206FE48700A66939 /* LaunchScreen.storyboard */,
+				A313299F206FE48700A66939 /* Main.storyboard */,
+				A313299D206FE48700A66939 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B6BAEF8C20711767007D5FC9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A313299B206FE48700A66939 /* Scene.swift */,
+				A3132999206FE48700A66939 /* Scene.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B6BAEF8D2071178B007D5FC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A31329A2206FE48700A66939 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5L6RZ6S9L7;
-				INFOPLIST_FILE = Meteor_AR/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Meteor_AR/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.otutama.Meteor-AR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,7 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5L6RZ6S9L7;
-				INFOPLIST_FILE = Meteor_AR/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Meteor_AR/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.otutama.Meteor-AR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
